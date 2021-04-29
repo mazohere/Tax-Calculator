@@ -1,8 +1,16 @@
 ﻿using UnityEngine;
 using SpeechLib;
+using UnityEngine.UI;
+using System;
+using System.Collections;
+using System.Collections.Generic;
 
 public class TaxCalculator : MonoBehaviour
 {
+
+    public InputField GetGrossSalaryText;
+    public Dropdown GetSalaryPayPeriodText;
+
     // Constant rate for the Medicare Levy
     const double MEDICARE_LEVY = 0.02;
 
@@ -35,16 +43,34 @@ public class TaxCalculator : MonoBehaviour
 
     private double GetGrossSalary()
     {
-        // Get from user. E.g. input box
-        // Validate the input (ensure it is a positive, valid number)
-        double grossYearlySalary = 1000;
+        double grossYearlySalary;
+        if (double.TryParse(GetGrossSalaryText.text, out double getGrossYearlySalary))
+        {
+            grossYearlySalary = Convert.ToDouble(GetGrossSalaryText.text);
+        }
+        else 
+        {
+            grossYearlySalary = 0;
+        }
         return grossYearlySalary;
     }
 
     private string GetSalaryPayPeriod()
     {
-        // Get from user. E.g. combobox or radio buttons
-        string salaryPayPeriod = "weekly";
+        string salaryPayPeriod;
+        if (GetSalaryPayPeriodText.value == 0)
+        {
+            salaryPayPeriod = "weekly";
+        } else if (GetSalaryPayPeriodText.value == 1)
+        {
+            salaryPayPeriod = "fortnightly";
+        } else if (GetSalaryPayPeriodText.value == 2)
+        {
+            salaryPayPeriod = "monthly";
+        } else
+        {
+            salaryPayPeriod = "yearly";
+        }
         return salaryPayPeriod;
     }
 
