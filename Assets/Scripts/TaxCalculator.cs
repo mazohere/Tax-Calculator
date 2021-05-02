@@ -10,6 +10,9 @@ public class TaxCalculator : MonoBehaviour
 
     public InputField GetGrossSalaryText;
     public Dropdown GetSalaryPayPeriodText;
+    public Text NetIncomeText;
+    public Text TaxPaidText;
+    public Text MedicareLevyText;
 
     // Constant rate for the Medicare Levy
     const double MEDICARE_LEVY = 0.02;
@@ -76,40 +79,67 @@ public class TaxCalculator : MonoBehaviour
 
     private double CalculateGrossYearlySalary(double grossSalaryInput, string salaryPayPeriod)
     {
-        // This is a stub, replace with the real calculation and return the result
-        double grossYearlySalary = 50000;
-        return grossYearlySalary;
+        if (salaryPayPeriod == "weekly")
+        {
+            return (grossSalaryInput * 52);
+        }
+        else if (salaryPayPeriod == "fortnightly")
+        {
+            return (grossSalaryInput * 26);
+        }
+        else if (salaryPayPeriod == "monthly")
+        {
+            return (grossSalaryInput * 12);
+        }
+        else 
+        {
+            return grossSalaryInput;
+        }
     }
 
     private double CalculateNetIncome(double grossYearlySalary, ref double medicareLevyPaid, ref double incomeTaxPaid)
     {
-        // This is a stub, replace with the real calculation and return the result
         medicareLevyPaid = CalculateMedicareLevy(grossYearlySalary);
         incomeTaxPaid = CalculateIncomeTax(grossYearlySalary);
-        double netIncome = 33000;        
-        return netIncome;
+
+        return (grossYearlySalary - medicareLevyPaid - incomeTaxPaid);
     }
 
     private double CalculateMedicareLevy(double grossYearlySalary)
     {
-        // This is a stub, replace with the real calculation and return the result
-        double medicareLevyPaid = 2000;        
-        return medicareLevyPaid;
+        return(grossYearlySalary * 0.02);
     }
 
     private double CalculateIncomeTax(double grossYearlySalary)
     {
-        // This is a stub, replace with the real calculation and return the result
-        double incomeTaxPaid = 15000;
-        return incomeTaxPaid;
+        if (grossYearlySalary < 18200)
+        {
+            return(0);
+        }
+        else if (grossYearlySalary < 37000)
+        {
+            return(0.19 * (grossYearlySalary - 18200));
+        }
+        else if (grossYearlySalary < 87000)
+        {
+            return(3572 + 0.325 * (grossYearlySalary - 37000));
+        }
+        else if (grossYearlySalary < 180000)
+        {
+            return(19822 + 0.37 * (grossYearlySalary - 87000));
+        }
+        else
+        {
+            return(54232 + 0.45 * (grossYearlySalary - 180000);
+        }
+
     }
 
     private void OutputResults(double medicareLevyPaid, double incomeTaxPaid, double netIncome)
     {
-        // Output the following to the GUI
-        // "Medicare levy paid: $" + medicareLevyPaid.ToString("F2");
-        // "Income tax paid: $" + incomeTaxPaid.ToString("F2");
-        // "Net income: $" + netIncome.ToString("F2");
+        NetIncomeText.text = Convert.ToString(netIncome);
+        MedicareLevyText.text = Convert.ToString(medicareLevyPaid);
+        TaxPaidText.text = Convert.ToString(incomeTaxPaid);
     }
 
     // Text to Speech
