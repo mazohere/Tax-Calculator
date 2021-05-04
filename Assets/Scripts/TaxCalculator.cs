@@ -151,9 +151,9 @@ public class TaxCalculator : MonoBehaviour
             NetIncomeText.color = Color.black;
             MedicareLevyText.color = Color.black;
             TaxPaidText.color = Color.black;
-            NetIncomeText.text = Convert.ToString(netIncome);
-            MedicareLevyText.text = Convert.ToString(medicareLevyPaid);
-            TaxPaidText.text = Convert.ToString(incomeTaxPaid);
+            NetIncomeText.text = Convert.ToString("$" + netIncome);
+            MedicareLevyText.text = Convert.ToString("$" + medicareLevyPaid);
+            TaxPaidText.text = Convert.ToString("$" + incomeTaxPaid);
         }
     }
 
