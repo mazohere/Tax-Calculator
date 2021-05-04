@@ -137,9 +137,24 @@ public class TaxCalculator : MonoBehaviour
 
     private void OutputResults(double medicareLevyPaid, double incomeTaxPaid, double netIncome)
     {
-        NetIncomeText.text = Convert.ToString(netIncome);
-        MedicareLevyText.text = Convert.ToString(medicareLevyPaid);
-        TaxPaidText.text = Convert.ToString(incomeTaxPaid);
+        if (netIncome == 0)
+        {
+            NetIncomeText.color = Color.red;
+            MedicareLevyText.color = Color.red;
+            TaxPaidText.color = Color.red;
+            NetIncomeText.text = "pootis";
+            MedicareLevyText.text = "pootis";
+            TaxPaidText.text = "pootis";
+        }
+        else
+        {
+            NetIncomeText.color = Color.black;
+            MedicareLevyText.color = Color.black;
+            TaxPaidText.color = Color.black;
+            NetIncomeText.text = Convert.ToString(netIncome);
+            MedicareLevyText.text = Convert.ToString(medicareLevyPaid);
+            TaxPaidText.text = Convert.ToString(incomeTaxPaid);
+        }
     }
 
     // Text to Speech
