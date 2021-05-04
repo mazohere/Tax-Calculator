@@ -674,8 +674,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 15}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 21.8, y: 15}
+  m_SizeDelta: {x: 203.57031, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &739553075
 MonoBehaviour:
@@ -709,7 +709,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Net Income:'
+  m_Text: 'Net Yearly Income:'
 --- !u!222 &739553076
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -752,8 +752,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -381.53, y: 46.9}
-  m_SizeDelta: {x: 158.94858, y: 29.802856}
+  m_AnchoredPosition: {x: -365.5, y: 46.9}
+  m_SizeDelta: {x: 190.90012, y: 29.802856}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &770144707
 MonoBehaviour:
@@ -787,7 +787,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Your Tax:'
+  m_Text: 'Your Yearly Tax:'
 --- !u!222 &770144708
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -854,10 +854,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -2639,10 +2639,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -2795,10 +2795,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
