@@ -10,12 +10,14 @@ public class Clear : MonoBehaviour
     public Text a;
     public Text b;
     public Text c;
+    public InputField d;
 
     void Start()
     {
         a.text = "";
         b.text = "";
         c.text = "";
+        d.text = "";
     }
 
     public void ClearText()
@@ -23,5 +25,6 @@ public class Clear : MonoBehaviour
         a.text = "";
         b.text = "";
         c.text = "";
+        d.text = "";
     }
 }
