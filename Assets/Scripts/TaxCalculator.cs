@@ -131,6 +131,7 @@ public class TaxCalculator : MonoBehaviour
         else
         {
             return(54232 + 0.45 * (grossYearlySalary - 180000));
+
         }
 
     }
