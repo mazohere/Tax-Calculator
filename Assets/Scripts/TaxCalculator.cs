@@ -138,14 +138,14 @@ public class TaxCalculator : MonoBehaviour
 
     private void OutputResults(double medicareLevyPaid, double incomeTaxPaid, double netIncome)
     {
-        if (netIncome == 0)
+        if (netIncome <= 0)
         {
             NetIncomeText.color = Color.red;
             MedicareLevyText.color = Color.red;
             TaxPaidText.color = Color.red;
-            NetIncomeText.text = "pootis";
-            MedicareLevyText.text = "pootis";
-            TaxPaidText.text = "pootis";
+            NetIncomeText.text = "Invalid";
+            MedicareLevyText.text = "Invalid";
+            TaxPaidText.text = "Invalid";
         }
         else
         {
