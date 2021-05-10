@@ -588,11 +588,22 @@ MonoBehaviour:
     m_Options:
     - m_Text: English
       m_Image: {fileID: 0}
-    - m_Text: Spanish
+    - m_Text: "Espa\xF1ol"
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 546690712}
+        m_MethodName: MakeLanguage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &546690710
 MonoBehaviour:
@@ -648,7 +659,9 @@ MonoBehaviour:
   NetIncomeText: {fileID: 0}
   TaxPaidText: {fileID: 0}
   MedicareLevyText: {fileID: 0}
-  GetLanguage: {fileID: 0}
+  GetLanguage: {fileID: 546690709}
+  Timeframe: {fileID: 1449443811}
+  GrossIncome: {fileID: 2111776811}
 --- !u!1 &552844040
 GameObject:
   m_ObjectHideFlags: 0
@@ -2825,8 +2838,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -388.2, y: 230.4}
-  m_SizeDelta: {x: 362.84674, y: 132.53107}
+  m_AnchoredPosition: {x: -388.58, y: 235.49}
+  m_SizeDelta: {x: 362.84674, y: 123.02484}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1539264181
 MonoBehaviour:

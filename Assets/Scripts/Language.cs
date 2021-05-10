@@ -13,16 +13,30 @@ public class Language : MonoBehaviour
     public Text TaxPaidText;
     public Text MedicareLevyText;
     public Dropdown GetLanguage;
+    public Text Timeframe;
+    public Text GrossIncome;
 
-    // Start is called before the first frame update
-    void Start()
+    public void MakeLanguage() 
     {
-        
-    }
+        if (GetLanguage.value == 0)
+        {
+            Timeframe.text = "Timeframe: ";
+            GrossIncome.text = "GrossIncome: ";
+            GetSalaryPayPeriodText.te
+            //etc
+        }
+        else if (GetLanguage.value == 1)
+        {
+            Timeframe.text = "periodo de tiempo: ";
+            GrossIncome.text = "Ingresos brutos: ";
+            //etc 
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+            GetSalaryPayPeriodText.options.Clear();
+            GetSalaryPayPeriodText.options.Add(new Dropdown.OptionData() { text = "Semanal" });
+            GetSalaryPayPeriodText.options.Add(new Dropdown.OptionData() { text = "Quincenal" });
+            GetSalaryPayPeriodText.options.Add(new Dropdown.OptionData() { text = "Mensual" });
+            GetSalaryPayPeriodText.options.Add(new Dropdown.OptionData() { text = "Anual" });
+
+        }
     }
 }
